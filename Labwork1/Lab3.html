@@ -1,0 +1,15 @@
+<title>Сайдуганов Руслан ПИ-422</title>
+<h1>Выполнение лабораторной работы №1 задание третье</h1>
+<script type="text/javascript">
+	var person;
+	person = window.prompt('Введите своё имя', 'Введите имя');
+	document.write('Ваше имя - ' + person + '?');
+	function setName() {
+		if (confirm('Не надоело?')) {
+			window.location.reload();
+		}
+		else { alert('Ну и правильно!'); }
+	}
+</script>
+<br><input type="button" onclick="history.back();" value="На главную"/>
+<br><input type="button" onclick="setName()" value="Еще раз"/>

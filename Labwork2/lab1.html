@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<head>
+    <meta charset="UTF-8">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+    <title>Сайдуганов Руслан ПИ-422</title>
+</head>
+<body>
+    <button id="b1" >Изменение цвета фона</button>
+    <script>
+        var a=0;
+        $(document).ready(function(){
+            $("#b1").click(function (){
+            a++;
+            switch(a){
+                case 1:document.bgColor="red";break;	
+                case 2:document.bgColor="blue";break;
+                case 3:document.bgColor="green";break;
+                case 4:document.bgColor="yellow";break;
+                case 5:document.bgColor="grey";break;
+                case 6:document.bgColor="black";break;
+                default: a=0; document.bgColor="white";
+            }
+            });
+        });
+        </script>
+</body>
+</html>
