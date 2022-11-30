@@ -1,0 +1,55 @@
+<meta charset="utf-8">
+<title>Сайдуганов Руслан ПИ-422</title>
+
+<body>
+<!-- <FORM method="post"> -->
+Ваше имя:* <input id="name" type="text" required><p>
+Пароль:* <input id="pass" type="password" required><p>
+Подтверждение пароля:* <input id="passcon" type="password" required><p>
+Email:* <input id="email" type="email" required><p>
+Тема сообщения: <input id="theme" type="text"><p>
+Сообщение: <input id="mess" type="text"><p>
+<input type="submit" id="subm" >
+<button id="clear" >Очистить</button>
+<input type="button" id="back" value="Назад" onclick="history.back();"></input>
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+<script>
+$(document).ready(function(){
+  $("#subm").click(function (){
+    $("input:not(#theme):lt(5)").each(function (){
+      var a = $(this);
+
+	if ($(this).val().length==0){ 
+	  $(this).attr("style","border-color:red;");
+	}
+
+	if ($(this)[0].id=="mess" && $(this).val().length<=10){ 
+	  $(this).attr("style","border-color:red;");
+	}
+
+	if ($(this)[0].id=="pass" || $(this)[0].id=="passcon"){ 
+
+	    if($(this).val().length<=4){
+		$(this).attr("style","border-color:red;");
+	    }
+
+	    if($("input:not(#theme):lt(5)")[1].value!=$("input:not(#theme):lt(5)")[2].value){
+		$(this).attr("style","border-color:red;");
+	    }
+	}
+				
+	if ($(this)[0].id=="email" && !($(this)[0].value.match(/[_\w.-]+@\w+[.]\w+/g))){
+	    $(this).attr("style","border-color:red;");
+	}
+				
+	setTimeout(function(){a.attr("style","")},400);
+    });
+			
+  });
+
+  $("#clear").click(function (){
+    $("input:not(#subm,#back)").val("");
+  });
+});
+</script>
+<!--  </form>  -->

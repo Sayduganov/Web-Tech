@@ -1,0 +1,29 @@
+<meta charset="utf-8">
+<title>Сайдуганов Руслан ПИ-422</title>
+<body>
+<br>Управление стрелками
+<input type="button" value="Назад" onclick="history.back();"></input>
+<br> 
+<img id="tree" src="1.jpg" style="position:relative"><br>
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+<script>
+$(document).ready(function(){
+  $(document).keyup(function(k){
+    if (k.key=="ArrowUp" || k.keyCode==38){
+      $("#tree").animate({top:"-=100"},200);
+    }
+    if (k.key=="ArrowDown" || k.keyCode==40){
+      $("#tree").animate({top:"+=100"},200);
+    }
+    if (k.key=="ArrowLeft" || k.keyCode==37){
+      $("#tree").animate({right:"+=100"},200);
+    }
+    if (k.key=="ArrowRight" || k.keyCode==39){
+      $("#tree").animate({right:"-=100"},200);
+    }
+  });
+});
+</script>
+
+</body>
+</html>

@@ -1,0 +1,16 @@
+<meta charset="utf-8">
+<title>Сайдуганов Руслан ПИ-422</title>
+</head>
+<body>
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+<p id="cor">Координаты:</p>
+<script>
+$(document).ready(function(){
+  $(document).mousemove(function(e){
+    $("#cor").html("Координаты: x = "+e.pageX+" y = "+e.pageY);
+  });
+});
+</script>
+<input type="button" value="Назад" onclick="history.back();"></input>
+</body>
+</html>

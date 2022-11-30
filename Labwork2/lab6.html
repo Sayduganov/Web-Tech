@@ -1,0 +1,40 @@
+<meta charset="utf-8">
+<title>
+Сайдуганов Руслан ПИ-422
+</title>
+</head>
+<body>
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+<h2>Опрос</h2>
+<h3>Вы любите печенье?? ^_^</h3>
+<input type="button" id="yes" value="Да">
+<input type="button" id="no" value="Нет">
+<p><input type="button" id="res" value="Результаты">
+<p id="sh">Результаты: <br>да - 0 (50%) <br>нет - 0 (50%)</p>
+<script>
+var y = 0;
+var n = 0;
+var yp = 0;
+var np = 0;
+$("#sh").hide();
+$(document).ready(function(){
+  $("#yes").click(function(){y++;results();});
+  $("#no").click(function(){n++;results();});
+    $("#res").click(function(){
+      if ($("#sh").is(":hidden")){
+	$("#sh").show(100);
+      }
+    else{$("#sh").hide(100);}
+  });
+});
+
+function results(){
+  yp=Math.round(10000*(y/(y+n)))/100;
+  np=Math.round(100*(100-yp))/100;
+  $("#sh").html("Результаты: <br>да - "+y+" ("+yp+"%) <br>нет - "+n+" ("+np+"%)");
+}
+</script>
+
+<input type="button" value="Назад" onclick="history.back();"></input>
+</body>
+</html>
