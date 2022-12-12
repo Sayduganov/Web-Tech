@@ -1,0 +1,257 @@
+* {
+    font: italic small-caps bold 1px cursive;
+    -moz-user-select: -moz-none;
+    -o-user-select: none;
+    -khtml-user-select: none;
+    -webkit-user-select: none;
+    user-select: none;
+    cursor: crosshair;
+    }
+    
+    img {
+      width: 5vw;
+      position:absolute;
+      animation-fill-mode: both;
+      animation-iteration-count: infinite;
+    }
+    body{
+      background-image: url("bg.png");
+      background-size: cover;
+      background-repeat: no-repeat;
+      background-attachment: fixed;
+      background-position: right;
+      overflow: hidden;
+    }
+    
+    #d1{
+      left:0;
+      bottom:20%;
+      animation-name: bird1;
+      animation-duration: 9s;
+    }
+    
+    #d2{
+      transform: scale(-1,1);
+      right:0;
+      bottom:30%;
+      animation-name: bird2;
+      animation-duration: 10s;
+    }
+    
+    #d3{
+      left:0;
+      bottom:80%;
+      animation-name: bird3;
+      animation-duration: 13s;
+    }
+    
+    #d4{
+      transform: scale(-1,1);
+      right:0;
+      bottom:10%;
+      animation-name: bird4;
+      animation-duration: 14s;
+    }
+    
+    #d5{
+      left:0;
+      bottom:90%;
+      animation-name: bird5;
+      animation-duration: 9s;
+    }
+    
+    .start{
+      background-color: black;
+      width: 15%;
+      height: 10%;
+      color:#FFFFFF;
+      top: 0;
+      right: 0;
+      bottom: 0;
+      left: 0;
+      margin: auto;
+      border: 0.2vw solid yellow;
+      border-radius: 1vw;
+      display:flex;
+      position:fixed;
+      flex-direction:column;
+      justify-content: center;
+    }
+    #text{
+      display: inline-block;
+      background-color:#000000;
+      color:#ffffff;
+      font-size:2vw;  
+      margin-left: auto;
+      margin-right: auto;
+    }
+    
+    .end{
+      background-color: black;
+      width: 25%;
+      height: 15%;
+      color:#FFFFFF;
+      top: 0;
+      right: 0;
+      bottom: 0;
+      left: 0;
+      margin: auto;
+      border: 0.2vw solid yellow;
+      border-radius: 1vw;
+      display:flex;
+      position:fixed;
+      flex-direction:column;
+      justify-content: center;
+    }
+    #result{
+      color:#ffffff;
+      font-size:1.5vw;  
+      margin-left: auto;
+      margin-right: auto;
+    }
+    #repeat{
+      color:#ffffff;
+      font-size:1.5vw;  
+      margin-left: auto;
+      margin-right: auto;
+    }
+    
+    .scoreContainer{
+      background-color: black;
+      width: 15%;
+      height: 10%;
+      color:#FFFFFF;
+      bottom:1%;
+      right:1%;
+      border: 0.2vw solid yellow;
+      border-radius: 1vw;
+      display:flex;
+      position:fixed;
+      flex-direction:column;
+      align-items:center;
+    }
+    #score-text{
+      font-size:1.5vw;  
+    }
+    #score-counter{
+      font-size:2vw;  
+      font-weight:bold;
+      color:#ffffff;
+    }
+    
+    .shotsContainer{
+      background-color: black;
+      width: 15%;
+      height:10%;
+      color:#FFFFFF;
+      bottom:1%;
+      right:17%;
+      border: 0.2vw solid yellow;
+      border-radius: 1vw;
+      display:flex;
+      position:fixed;
+      flex-direction:column;
+      align-items:center;
+    
+    }
+    #shots-text{
+      font-size:1.5vw;
+    }
+    #shots-counter{
+      font-size:2vw;  
+      font-weight:bold;
+      color:#ffffff;
+    }
+    
+    .timeContainer{
+      background-color: black;
+      width: 15%;
+      height:10%;
+      color:#FFFFFF;
+      bottom:1%;
+      left:1%;
+      border: 0.2vw solid yellow;
+      border-radius: 1vw;
+      display:flex;
+      position:fixed;
+      flex-direction:column;
+      align-items:center;
+    }
+    #time-text{
+      font-size:1.5vw;
+    }
+    #time{
+      font-size:2vw;  
+      font-weight:bold;
+      color:#ffffff;
+    }
+    
+    @keyframes bird1 {
+      0% {left:10%; top:10%}
+      10% {left:20%; top:30%}
+      20% {left:30%; top:50%}
+      30% {left:40%; top:70%}
+      40% {left:60%; top:50%}
+      50% {left:90%; top:20%}
+      60% {left:70%; top:30%}
+      70% {left:60%; top:50%}
+      80% {left:40%; top:75%}
+      90% {left:30%; top:50%}
+      100% {left:10%; top:10%}
+    }
+    
+    @keyframes bird2 {
+      0% {right:5%; top:15%}
+      10% {right:10%; top:20%}
+      20% {right:20%; top:40%}
+      30% {right:30%; top:65%}
+      40% {right:70%; top:40%}
+      50% {right:90%; top:20%}
+      60% {right:80%; top:30%}
+      70% {right:60%; top:50%}
+      80% {right:40%; top:70%}
+      90% {right:20%; top:50%}
+      100% {right:5%; top:15%}
+    }
+    
+    @keyframes bird3 {
+      0% {left:15%; top:75%}
+      10% {left:25%; top:50%}
+      20% {left:35%; top:40%}
+      30% {left:65%; top:10%}
+      40% {left:30%; top:50%}
+      50% {left:60%; top:20%}
+      60% {left:70%; top:60%}
+      70% {left:40%; top:40%}
+      80% {left:50%; top:50%}
+      90% {left:30%; top:20%}
+      100% {left:15%; top:75%}
+    }
+    
+    @keyframes bird4 {
+      0% {right:15%; top:10%}
+      10% {right:25%; top:30%}
+      20% {right:45%; top:50%}
+      30% {right:65%; top:70%}
+      40% {right:85%; top:50%}
+      50% {right:70%; top:30%}
+      60% {right:80%; top:60%}
+      70% {right:50%; top:75%}
+      80% {right:30%; top:10%}
+      90% {right:40%; top:30%}
+      100% {right:15%; top:10%}
+    }
+    
+    @keyframes bird5 {
+      0% {left:5%; top:50%}
+      10% {left:25%; top:30%}
+      20% {left:45%; top:10%}
+      30% {left:65%; top:40%}
+      40% {left:90%; top:60%}
+      50% {left:70%; top:75%}
+      60% {left:50%; top:60%}
+      70% {left:30%; top:30%}
+      80% {left:10%; top:10%}
+      90% {left:25%; top:30%}
+      100% {left:5%; top:50%}
+    }

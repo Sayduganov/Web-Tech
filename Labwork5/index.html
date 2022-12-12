@@ -1,0 +1,86 @@
+<meta charset="utf-8">
+<head>
+  <link rel="stylesheet" href="style.css">
+  <script language="JavaScript" type="text/JavaScript">
+let count = 0;
+let count0 = 0;
+let seconds = 0;
+
+function start() {
+  document.querySelector('.start').style.display = "none";
+  document.querySelector('.container').style.display = "block";
+  count0 = -1;
+seconds = 8;
+document.getElementById("time").innerHTML = seconds;
+document.querySelector('.results').style.display = "none";
+        var seconds_timer_id = setInterval(function() {
+            if (seconds > 0) {
+                seconds --;
+                document.getElementById("time").innerHTML = seconds;
+            } else {
+                clearInterval(seconds_timer_id);
+		
+		document.querySelector('.container').style.display = "none";
+		document.getElementById("result").innerHTML = "Время вышло! Вы проиграли :(";
+		document.querySelector('.results').style.display = "block";
+            }
+        }, 1000);
+
+}
+
+
+window.onclick = function(e) {
+    if(e.target.nodeName == "IMG") {
+      e.target.style.display = "none";
+      document.getElementById("score-counter").innerHTML = ++count;
+    }
+    else { document.getElementById("shots-counter").innerHTML = ++count0; }
+
+    if(count==5){
+	document.querySelector('.container').style.display = "none";
+	document.getElementById("result").innerHTML = "Вы успели! Попали во всех :)";
+	document.querySelector('.results').style.display = "block";
+    }
+
+}
+</script>
+</head>
+
+<body>
+
+  <div class="start" onclick="start()">
+    <div id="text">Начать</div>
+    <div id="seconds"></div>
+  </div>
+
+  <div hidden class="results">
+    <div class="end">
+      <div id="result"></div>
+      <div id="repeat" onclick="start()">Начать заново</div>
+    </div>
+  </div>
+
+  <div hidden class="container">
+    <img id='d1' src="duck.gif"/>
+    <img id='d2' src="duck.gif"/>
+    <img id='d3' src="duck.gif"/>
+    <img id='d4' src="duck.gif"/>
+    <img id='d5' src="duck.gif"/>
+
+    <div class='scoreContainer'>
+      <div id="score-text">Попаданий:</div>
+      <div id="score-counter">0</div>
+    </div>
+
+    <div class='shotsContainer'>
+      <div id="shots-text">Мимо:</div>
+      <div id="shots-counter">0</div>
+    </div>
+
+    <div class='timeContainer'>
+      <div id="time-text">Секунд осталось:</div>
+      <div id="time">8</div>
+    </div>
+  </div>
+
+</body>
